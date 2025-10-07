@@ -32,7 +32,7 @@ This project uses [python](http://python.org), but they are not locally installe
    | USE_CONCURRENT  | Enable multi-threading experimental features. Fill in **`True`**, then **`SLEEP_GAP`** will be invalid |
 
 
-## Optional Settings
+## Optional Settings🛠
 
 - **Customize multiple accounts** 
   >To use multiple accounts, please split with **`#`** and save to the variables **USER** and **PWD**

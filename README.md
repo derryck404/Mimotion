@@ -1,5 +1,15 @@
 # Github Actions Guide on ZeppLife For Email
-![Mimotion compliant](https://img.shields.io/badge/%F0%9F%95%B6-Mimotion%F0%9F%8F%83%E2%80%8D%E2%99%82%EF%B8%8F-blue?labelColor=f46db0)
+![ZeppLife](https://img.shields.io/badge/%F0%9F%8E%AD-ZeppLife%F0%9F%92%A8-orange?labelColor=9cf)
+![Mimotion](https://img.shields.io/badge/%F0%9F%95%B6-Mimotion%F0%9F%8F%83%E2%80%8D%E2%99%82%EF%B8%8F-blue?labelColor=f46db0)
+
+## ✨Table of Contents
+- [Install](#install)
+- [Usage](#usage)
+- [Optional settings](#optional-settings)
+- [View Logs](#view-logs)
+- [Update](#update)
+- [Notes](#notes)
+- [Contributing](#contributing)
 
 
 
@@ -71,22 +81,6 @@ This project uses [python](http://python.org), but they are not locally installe
   UTC+8: 8,10,12,14,16,22
   ```
 
- 
-## ⌛Update
-- Click **`Sync fork`** on the repository interface, click **`Update branch`** and wait for synchronization to complete.
-- Back up the **Code[`encrypted_tokens.data`](https://github.com/derryck404/Mimotion/blob/master/encrypted_tokens.data)** in advance when **`AES_KEY`** is configured. Resubmit it to the repository after the update is completed.
-
-
-
-## 🔔Notes
-- This Github Action run six times a day, which controlled by **`cron`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/master/.github/workflows/run.yml)**. The variable `minute` is random values.
-- Please be sure to match the username and password of multiple accounts, otherwise it will not work.  
-- The start time must be **UTC Time**.  
-- If Alipay has not updated the step count, please go to **ZeppLife ---> Settings ---> Account ---> Delete Account ---> Clear Datas**, then log in again and rebind the third party authentication.  
-- ZeppLife will not update the step count, only the associated ones will be synchronized.  
-- Please note that the account is **ZeppLife account**.  
-- The maximum and minimum steps increase over time and reach their maximum value at 22:00 Beijing time. To change this range, modify **`MIN_STEP`** and **`MAX_STEP`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/main/.github/workflows/run.yml)**.
-- The execution of **`Cron`** is queued according to the resources of GitHub actions, and it is not 100% run at the specified time.
 
 
 ## 🔍View Logs
@@ -97,6 +91,24 @@ This project uses [python](http://python.org), but they are not locally installe
   - Among the execution steps, focus on **`Start`**. Click it to expand the details.
   - Expanding this step will display the execution log. If the execution is successful, the current random step count for each account will be displayed.
   - If the execution fails, analyze the specific cause of the failure.
+
+
+
+## ⌛Update
+- Click **`Sync fork`** on the repository interface, click **`Update branch`** and wait for synchronization to complete.
+- Back up the **Code[`encrypted_tokens.data`](https://github.com/derryck404/Mimotion/blob/master/encrypted_tokens.data)** in advance when **`AES_KEY`** is configured. Resubmit it to the repository after the update is completed.
+
+
+
+## 🔔Notes
+- This Github Action run six times a day, which controlled by **`cron`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/master/.github/workflows/run.yml)**. The variable **`minute`** is random values.
+- Please be sure to match the username and password of multiple accounts, otherwise it will not work.  
+- The start time must be **UTC Time**.  
+- If Alipay has not updated the step count, please go to **ZeppLife ---> Settings ---> Account ---> Delete Account ---> Clear Datas**, then log in again and rebind the third party authentication.  
+- ZeppLife will not update the step count, only the associated ones will be synchronized.  
+- Please note that the account is **ZeppLife account**.  
+- The maximum and minimum steps increase over time and reach their maximum value at 22:00 Beijing time. To change this range, modify **`MIN_STEP`** and **`MAX_STEP`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/main/.github/workflows/run.yml)**.
+- The execution of **`Cron`** is queued according to the resources of GitHub actions, and it is not 100% run at the specified time.
 
 
 

@@ -1,20 +1,12 @@
 # Github Actions Deployment Guide on ZeppLife For Email
-![Motionfit compliant](https://img.shields.io/badge/%F0%9F%95%B6-Motionfit%F0%9F%8F%83%E2%80%8D%E2%99%82%EF%B8%8F-blue?labelColor=f46db0)
+![Mimotion compliant](https://img.shields.io/badge/%F0%9F%95%B6-Mimotion%F0%9F%8F%83%E2%80%8D%E2%99%82%EF%B8%8F-blue?labelColor=f46db0)
 
 
-## Table of Contents🗂
-- [Install](#install)
-- [Usage](#usage)
-- [Optional settings](#optional-settings)
-- [Notes](#notes)
-- [Contributing](#contributing)
-
-
-## Install💻
+## 💻Install
 This project uses [python](http://python.org), but they are not locally installed. Just **FORK THIS REPOSITORY**.
 
 
-## Usage📌
+## 📌Usage
 -  Fork this repository.  
 -  Set Actions secrets and variables in the repository settings.  
 -  Click Actions, run the Brush Steps Workflow.
@@ -32,7 +24,7 @@ This project uses [python](http://python.org), but they are not locally installe
    | USE_CONCURRENT  | Enable multi-threading experimental features. Fill in **`True`**, then **`SLEEP_GAP`** will be invalid |
 
 
-## Optional Settings🛠
+## 🛠Optional Settings
 
 - **Customize multiple accounts** 
   >To use multiple accounts, please split with **`#`** and save to the variables **USER** and **PWD**
@@ -53,7 +45,7 @@ This project uses [python](http://python.org), but they are not locally installe
   ```
  
 
-## Notes🔔
+## 🔔Notes
 
 - This Github Action run six times a day, which controlled by **`cron`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/master/.github/workflows/run.yml)**. The variable `minute` is random values.
 - Please be sure to match the username and password of multiple accounts, otherwise it will not work.  
@@ -64,7 +56,7 @@ This project uses [python](http://python.org), but they are not locally installe
 - The maximum and minimum steps increase over time and reach their maximum value at 22:00 Beijing time. To change this range, modify **`MIN_STEP`** and **`MAX_STEP`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/main/.github/workflows/run.yml)**.
 
 
-## Contributing💌
+## 💌Contributing
 This project is originated fork from [@TonyJiangWJ](https://github.com/TonyJiangWJ/mimotion), which modified from [@xunichanghuan](https://github.com/xunichanghuan/), [@huangshihai](https://github.com/huangshihai/mimotion) and [@hanximeng](https://github.com/hanximeng/Zepp_API/). Many thanks for their contribution to the project.
 
 <a href="https://github.com/TonyJiangWJ/"><img src="https://avatars.githubusercontent.com/u/11325805?v=4" width="50" height="50" style="border-radius:50%; overflow:hidden;"/></a>

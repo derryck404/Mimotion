@@ -1,4 +1,4 @@
-# Github Actions Deployment Guide on ZeppLife For Email
+# Github Actions Guide on ZeppLife For Email
 ![Mimotion compliant](https://img.shields.io/badge/%F0%9F%95%B6-Mimotion%F0%9F%8F%83%E2%80%8D%E2%99%82%EF%B8%8F-blue?labelColor=f46db0)
 
 

@@ -13,7 +13,7 @@ This project uses [python](http://python.org), but they are not locally installe
 -  Set Actions secrets and variables in the repository settings.  
 -  Click Actions, run the Brush Steps Workflow.
   
-   - Set the secrets **`PAT`**, **`AES_KEY`**, **`CONFIG`** in [Settings](https://github.com/derryck404/mimotion/settings/variables/actions). From **Settings-->Secrets and variables-->Actions-->New repository secret**.
+   - Set the secrets **`PAT`**, **`AES_KEY`**, **`CONFIG`** in [Settings](../../settings/variables/actions). From **Settings-->Secrets and variables-->Actions-->New repository secret**.
 
      | Secrets  | Format   |
      |----------|----------|
@@ -53,7 +53,6 @@ This project uses [python](http://python.org), but they are not locally installe
 
    
 ## 🛠Optional Settings
-
 - **Customize multiple accounts** 
   >To use multiple accounts, please split with **`#`** and save to the variables **USER** and **PWD**
   ```json
@@ -66,7 +65,7 @@ This project uses [python](http://python.org), but they are not locally installe
   ```
 
 - **Customize start time** 
-  >Set the Variables **`CRON_HOURS`** in [Settings](https://github.com/derryck404/mimotion/settings/variables/actions). From **Settings-->Secrets and variables-->Actions-->New repository variables**.
+  >Set the Variables **`CRON_HOURS`** in [Settings](../../settings/variables/actions). From **Settings-->Secrets and variables-->Actions-->New repository variables**.
   ```yaml
   UTC: 0,2,4,6,8,14
   UTC+8: 8,10,12,14,16,22
@@ -87,6 +86,17 @@ This project uses [python](http://python.org), but they are not locally installe
 - ZeppLife will not update the step count, only the associated ones will be synchronized.  
 - Please note that the account is **ZeppLife account**.  
 - The maximum and minimum steps increase over time and reach their maximum value at 22:00 Beijing time. To change this range, modify **`MIN_STEP`** and **`MAX_STEP`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/main/.github/workflows/run.yml)**.
+- The execution of **`Cron`** is queued according to the resources of GitHub actions, and it is not 100% run at the specified time.
+
+
+## 🔍View Logs
+- Go to [Actions](../../actions) to view the execution history of all workflows.
+  - **`Random Cron #5: Scheduled`** indicates a scheduled task, while **`Random Cron #4: Manually run by xxx`** indicates a manual trigger.
+- Click a record to view the execution details. Here, we use **`Steps`** as an example:
+  - In the **`Jobs`** section of the details interface, you can see a **`build`**. Click it to view the execution steps.
+  - Among the execution steps, focus on **`Start`**. Click it to expand the details.
+  - Expanding this step will display the execution log. If the execution is successful, the current random step count for each account will be displayed.
+  - If the execution fails, analyze the specific cause of the failure.
 
 
 

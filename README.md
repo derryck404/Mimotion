@@ -13,7 +13,7 @@ This project uses [python](http://python.org), but they are not locally installe
 -  Set Actions secrets and variables in the repository settings.  
 -  Click Actions, run the Brush Steps Workflow.
   
-   - Set the secrets **`PAT`**, **`AES_KEY`**, **`CONFIG`** in [Settings](../../settings/variables/actions). From **Settings-->Secrets and variables-->Actions-->New repository secret**.
+   - Set the secrets **`PAT`**, **`AES_KEY`**, **`CONFIG`** in [Settings](../../settings/variables/actions). From **Settings--->Secrets and variables--->Actions--->New repository secret**.
 
      | Secrets  | Format   |
      |----------|----------|
@@ -65,7 +65,7 @@ This project uses [python](http://python.org), but they are not locally installe
   ```
 
 - **Customize start time** 
-  >Set the Variables **`CRON_HOURS`** in [Settings](../../settings/variables/actions). From **Settings-->Secrets and variables-->Actions-->New repository variables**.
+  >Set the Variables **`CRON_HOURS`** in [Settings](../../settings/variables/actions). From **Settings--->Secrets and variables--->Actions--->New repository variables**.
   ```yaml
   UTC: 0,2,4,6,8,14
   UTC+8: 8,10,12,14,16,22

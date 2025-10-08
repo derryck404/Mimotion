@@ -45,6 +45,7 @@ This project uses [python](http://python.org), but you do not need to install it
            "USE_CONCURRENT": "False"
          }
         ```
+  
       >The keyname and format of **`CONFIG`** configuration are as follows.
         
         | KeyName         | Format                                                                                                 |
@@ -58,6 +59,7 @@ This project uses [python](http://python.org), but you do not need to install it
         | PUSH_PLUS_MAX   | Set the maximum number of account details that **Pushplus** can push. The default value is 30          |
         | SLEEP_GAP       | The interval for executing tasks with multiple accounts, in seconds. The default value is 5            |
         | USE_CONCURRENT  | Enable multi-threading experimental features. Fill in **`True`**, then **`SLEEP_GAP`** will be invalid |
+
  
    - Manually run the [Brush Steps](https://github.com/derryck404/Mimotion/actions/workflows/run.yml) workflow. Click **`Run workflow`** to trigger the execution, view the execution record, and verify whether it is configured correctly.
 

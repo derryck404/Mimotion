@@ -43,8 +43,8 @@ This project uses [python](http://python.org), but you do not need to install it
            "PUSH_PLUS_MAX": "30",
            "SLEEP_GAP": "5",
            "USE_CONCURRENT": "False"
-        }
-       ```
+         }
+        ```
 
        | KeyName         | Format                                                                                                 |
        |-----------------|--------------------------------------------------------------------------------------------------------|

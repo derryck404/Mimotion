@@ -46,17 +46,17 @@ This project uses [python](http://python.org), but you do not need to install it
         }
        ```
 
-        | KeyName         | Format                                                                                                 |
-        |-----------------|--------------------------------------------------------------------------------------------------------|
-        | USER            | Fill in the **ZeppLife account** email address, only support email account registration login          |
-        | PWD             | Enter the password for your **ZeppLife account**                                                       |
-        | MIN_STEP        | Minimum steps                                                                                          |
-        | MAX_STEP        | Maximum steps. Reaching its maximum value at 22:00 UTC+8                                               |
-        | PUSH_PLUS_TOKEN | Enter your [Pushplus](https://www.pushplus.plus) token                                                 |
-        | PUSH_PLUS_HOUR  | Set the scheduled push notification time for **Pushplus** as an integer value, or the notifications will be pushed immediately. |
-        | PUSH_PLUS_MAX   | Set the maximum number of account details that **Pushplus** can push. The default value is 30          |
-        | SLEEP_GAP       | The interval for executing tasks with multiple accounts, in seconds. The default value is 5            |
-        | USE_CONCURRENT  | Enable multi-threading experimental features. Fill in **`True`**, then **`SLEEP_GAP`** will be invalid |
+       | KeyName         | Format                                                                                                 |
+       |-----------------|--------------------------------------------------------------------------------------------------------|
+       | USER            | Fill in the **ZeppLife account** email address, only support email account registration login          |
+       | PWD             | Enter the password for your **ZeppLife account**                                                       |
+       | MIN_STEP        | Minimum steps                                                                                          |
+       | MAX_STEP        | Maximum steps. Reaching its maximum value at 22:00 UTC+8                                               |
+       | PUSH_PLUS_TOKEN | Enter your [Pushplus](https://www.pushplus.plus) token                                                 |
+       | PUSH_PLUS_HOUR  | Set the scheduled push notification time for **Pushplus** as an integer value, or the notifications will be pushed immediately. |
+       | PUSH_PLUS_MAX   | Set the maximum number of account details that **Pushplus** can push. The default value is 30          |
+       | SLEEP_GAP       | The interval for executing tasks with multiple accounts, in seconds. The default value is 5            |
+       | USE_CONCURRENT  | Enable multi-threading experimental features. Fill in **`True`**, then **`SLEEP_GAP`** will be invalid |
  
    - Manually run the [Brush Steps](https://github.com/derryck404/Mimotion/actions/workflows/run.yml) workflow. Click **`Run workflow`** to trigger the execution, view the execution record, and verify whether it is configured correctly.
 

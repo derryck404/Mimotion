@@ -14,16 +14,16 @@
 
 
 ## 💻Install
-This project uses [python](http://python.org), but they are not locally installed. Just **FORK THIS REPOSITORY**.
+This project uses [python](http://python.org), but you do not need to install it locally. Just **FORK THIS REPOSITORY**.
 
 
 
 ## 📌Usage
 -  Fork this repository.  
 -  Set Actions secrets and variables in the repository settings.  
--  Click Actions, run the Brush Steps Workflow.
+-  Click **`Actions`** and run the **`Brush Steps`** Workflow.
   
-   - Set the secrets **`PAT`**, **`AES_KEY`**, **`CONFIG`** in [Settings](../../settings/variables/actions). From **Settings--->Secrets and variables--->Actions--->New repository secret**.
+   - Set the secrets **`PAT`**, **`AES_KEY`**, **`CONFIG`** in [Settings](../../settings/variables/actions) via **Settings--->Secrets and variables--->Actions--->New repository secret**.
 
      | Secrets  | Format   |
      |----------|----------|
@@ -31,7 +31,7 @@ This project uses [python](http://python.org), but they are not locally installe
      | AES_KEY  | For multiple accounts, set a non-Chinese string with a length of 16 characters, run the [Brush Steps](https://github.com/derryck404/Mimotion/actions/workflows/run.yml) workflow twice  |
      | CONFIG   | Set the user key **`USER`**, **`PWD`**, **`MIN_STEP`**, **`MIN_STEP`** and others fileds  |
 
-      >The configuration content of **`CONFIG`** is as follows.
+      >The **`CONFIG`** configuration should look like the following:
         ```json
          {
            "USER": "abcxxx@xx.com",
@@ -49,11 +49,11 @@ This project uses [python](http://python.org), but they are not locally installe
        | KeyName         | Format                                                                                                 |
        |-----------------|--------------------------------------------------------------------------------------------------------|
        | USER            | Fill in the **ZeppLife account** email address, only support email account registration login          |
-       | PWD             | Fill in the password corresponding to your **ZeppLife account**                                        |
+       | PWD             | Enter the password for your **ZeppLife account**                                                       |
        | MIN_STEP        | Minimum steps                                                                                          |
        | MAX_STEP        | Maximum steps. Reaching its maximum value at 22:00 UTC+8                                               |
-       | PUSH_PLUS_TOKEN | Fill in [Pushplus](https://www.pushplus.plus) token                                                    |
-       | PUSH_PLUS_HOUR  | Set **Pushplus** scheduled push notification, the value is an integer, if not pushed immediately       |
+       | PUSH_PLUS_TOKEN | Enter your [Pushplus](https://www.pushplus.plus) token                                                 |
+       | PUSH_PLUS_HOUR  | Set the scheduled push notification time for **Pushplus** as an integer value, or the notifications will be pushed immediately. |
        | PUSH_PLUS_MAX   | Set the maximum number of account details that **Pushplus** can push. The default value is 30          |
        | SLEEP_GAP       | The interval for executing tasks with multiple accounts, in seconds. The default value is 5            |
        | USE_CONCURRENT  | Enable multi-threading experimental features. Fill in **`True`**, then **`SLEEP_GAP`** will be invalid |
@@ -64,7 +64,7 @@ This project uses [python](http://python.org), but they are not locally installe
    
 ## 🛠Optional Settings
 - **Customize multiple accounts** 
-  >To use multiple accounts, please split with **`#`** and save to the variables **USER** and **PWD**
+  >To use multiple accounts, please separate them with **`#`** and save to the variables **USER** and **PWD**
 
   ```json
   {
@@ -88,8 +88,8 @@ This project uses [python](http://python.org), but they are not locally installe
 - Go to [Actions](../../actions) to view the execution history of all workflows.
   - **`Random Cron #5: Scheduled`** indicates a scheduled task, while **`Random Cron #4: Manually run by xxx`** indicates a manual trigger.
 - Click a record to view the execution details. Here, we use **`Steps`** as an example:
-  - In the **`Jobs`** section of the details interface, you can see a **`build`**. Click it to view the execution steps.
-  - Among the execution steps, focus on **`Start`**. Click it to expand the details.
+  - In the **`Jobs`** section of the details page, you can see a **`build`**. Click it to view the execution steps.
+  - In the execution steps, focus on **`Start`**. Click it to expand the details.
   - Expanding this step will display the execution log. If the execution is successful, the current random step count for each account will be displayed.
   - If the execution fails, analyze the specific cause of the failure.
 
@@ -102,13 +102,13 @@ This project uses [python](http://python.org), but they are not locally installe
 
 
 ## 🔔Notes
-- This Github Action run six times a day, which controlled by **`cron`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/master/.github/workflows/run.yml)**. The variable **`minute`** is random values.
+- This Github Action runs six times a day, which controlled by **`cron`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/master/.github/workflows/run.yml)**. The variable **`minute`** is random values.
 - Please be sure to match the username and password of multiple accounts, otherwise it will not work.  
 - The start time must be **UTC Time**.  
 - If Alipay has not updated the step count, please go to **ZeppLife ---> Settings ---> Account ---> Delete Account ---> Clear Datas**, then log in again and rebind the third party authentication.  
 - ZeppLife will not update the step count, only the associated ones will be synchronized.  
 - Please note that the account is **ZeppLife account**.  
-- The maximum and minimum steps increase over time and reach their maximum value at 22:00 Beijing time. To change this range, modify **`MIN_STEP`** and **`MAX_STEP`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/main/.github/workflows/run.yml)**.
+- The maximum and minimum steps increase over time and reach their peak at 22:00 Beijing time. To change this range, modify **`MIN_STEP`** and **`MAX_STEP`** in **Code [run.yml](https://github.com/derryck404/Mimotion/blob/main/.github/workflows/run.yml)**.
 - The execution of **`Cron`** is queued according to the resources of GitHub actions, and it is not 100% run at the specified time.
 
 
